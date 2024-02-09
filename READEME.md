@@ -1,8 +1,17 @@
-# Configleam JavaScript Client
+
+<div align="center">
+  <h1> Configleam JavaScript Client </h1>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Last Tag](https://img.shields.io/github/v/tag/raw-leak/configleam-js-client?label=Last%20Tag)
+![Version](https://img.shields.io/github/v/release/raw-leak/configleam-js-client)
+![Contributors](https://img.shields.io/github/contributors/raw-leak/configleam-js-client)
+
+</div>
 
 A JavaScript client library for interacting with the Configleam service, providing an easy-to-use interface for fetching configuration data.
+
+**Note:** If you're looking for the main Configleam project, which provides the backend service, it is located [here](https://github.com/raw-leak/configleam).
 
 ## Installation
 
@@ -63,3 +72,10 @@ Please report any issues or feature requests on the [Issue Tracker](https://gith
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/mykhaylo-gusak/)
+[Mykhaylo Gusak] - mykhaylogusak@hotmail.com
+
+Project Link: [https://github.com/raw-leak/configleam-js-client](https://github.com/raw-leak/configleam-js-client)
