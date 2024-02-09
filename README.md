@@ -50,16 +50,48 @@ console.log(config);
 
 ## API
 
-### `Configleam(options: ConfigleamOptions)`
+### Configleam(options: ConfigleamOptions)
 
 Creates a new instance of the Configleam client with the specified options.
 
-### `readConfig(params: ReadConfigParam, options?: ReadConfigOptions): Promise<ConfigleamConfig>`
+#### Parameters
+- `options`: A configuration object for initializing the Configleam client.
+  - `addrs`: The base URL of the Configleam service endpoint.
+
+### readConfig(params: ReadConfigParam, options?: ReadConfigOptions): Promise<ConfigleamConfig>
 
 Fetches configuration data from the Configleam service endpoint.
 
-- `params`: An object containing parameters for fetching configuration data (e.g., environment, groups, globals).
+#### Parameters
+- `params`: An object containing parameters for fetching configuration data.
+  - `env`: The environment for which configuration data is requested.
+  - `groups` (optional): An array of groups to filter the configuration data.
+  - `globals` (optional): An array of global keys to include in the configuration data.
 - `options` (optional): Additional options for the request, such as custom headers.
+  - `headers` (optional): Additional headers to the request.
+
+#### Returns
+A Promise that resolves to the fetched configuration data. The returned data is structured as follows:
+- For each requested group, the configuration data is nested under the group's name.
+- Each requested global key is included as a top-level key in the configuration data.
+Certainly! Here's an example request along with the corresponding response:
+
+#### Example Request
+```typescript
+const params = {
+  env: 'production',
+  groups: ['api-one', 'api-two'],
+  globals: ['global-1', 'global-2']
+};
+
+const options = {
+  headers: {
+    Authorization: 'Bearer <token>'
+  }
+};
+
+await configleam.readConfig(params, options);
+```
 
 ## Contributing
 
