@@ -7,12 +7,14 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": "https://github.com/raw-leak/configleam-js-client",
   "files": [
     "dist/",
     "README.md",
     "LICENSE"
   ],
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "scripts": {
