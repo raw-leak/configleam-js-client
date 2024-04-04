@@ -1,15 +1,29 @@
-// Custom error class for invalid configuration options
+/**
+ * Represents an error that occurs when configuration options are invalid.
+ * This error is thrown when the provided options for Configleam are incorrect or missing essential properties.
+ */
 export class InvalidConfigleamOptionsError extends Error {
-    constructor(message: string) {
-        super(message);
-        this.name = 'INVALID_CONFIG_OPTIONS_ERROR';
-    }
+  /**
+   * Constructs a new InvalidConfigleamOptionsError instance.
+   * @param message - A description of the error.
+   */
+  constructor(message: string) {
+    super(message);
+    this.name = 'InvalidConfigleamOptionsError';
+  }
 }
 
-// Custom error class for failed configuration fetch
+/**
+ * Represents an error that occurs when fetching configuration fails.
+ * This error is thrown when there is a failure in fetching configuration data from the server.
+ */
 export class ConfigFetchError extends Error {
-    constructor(message: string) {
-        super(message);
-        this.name = 'CONFIG_FETCH_ERROR';
-    }
+  /**
+   * Constructs a new ConfigFetchError instance.
+   * @param message - A description of the error.
+   */
+  constructor(message: string) {
+    super(message);
+    this.name = 'ConfigFetchError';
+  }
 }

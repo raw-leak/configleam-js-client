@@ -4,10 +4,10 @@
   "description": "JS client for configleam",
   "author": "Mykhaylo Gusak",
   "license": "MIT",
+  "repository": "https://github.com/raw-leak/configleam-js-client",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/raw-leak/configleam-js-client",
   "files": [
     "dist/",
     "README.md",
@@ -19,11 +19,14 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "start": "node src/index.js"
+    "lint": "prettier --check 'src/**/*.{js,ts,json,css}'",
+    "lint:fix": "prettier --write 'src/**/*.{js,ts,json,css}'"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
     "jest": "^29.7.0",
+    "prettier": "^3.2.5",
     "ts-jest": "^29.1.2"
   }
 }
